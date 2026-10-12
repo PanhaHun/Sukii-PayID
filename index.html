@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14111a">
+  <meta name="description" content="Pay Hey_Sukii (3D printing and electronics) quickly with PayID. Tap Copy and paste the PayID into your banking app.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hey_Sukii - Pay with PayID">
+  <meta property="og:description" content="Pay Hey_Sukii with PayID. Tap Copy and paste it into your banking app.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Hey_Sukii | Pay with PayID</title>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+      <h1 class="brand"><img src="assets/images/logo-white.svg" alt="Hey_Sukii" width="1500" height="435"></h1>
+      <p class="tagline">3D Print &amp; Electronics</p>
+    </header>
+
+    <section class="card" aria-labelledby="pay-heading">
+      <img class="payid-logo" src="assets/images/payid-logo.png" alt="PayID" width="328" height="168">
+      <h2 id="pay-heading">Pay me with PayID</h2>
+      <p class="hint">Tap Copy, then paste it into your banking app.</p>
+
+      <!-- To change a PayID: edit the visible text AND the data-copy value on its button. -->
+      <div class="payid-row">
+        <div>
+          <div class="payid-label">Mobile</div>
+          <div class="payid-value">0413 816 785</div>
+        </div>
+        <button type="button" class="copy-btn" id="copy-mobile" data-copy="0413816785" aria-label="Copy PayID mobile number">Copy</button>
+      </div>
+
+      <div class="payid-row">
+        <div>
+          <div class="payid-label">Email</div>
+          <div class="payid-value payid-value--email">hun.vannpanha<wbr>@gmail.com</div>
+        </div>
+        <button type="button" class="copy-btn" id="copy-email" data-copy="hun.vannpanha@gmail.com" aria-label="Copy PayID email address">Copy</button>
+      </div>
+
+      <p class="payid-name"><span>PayID name:</span> <strong>V HUN</strong></p>
+    </section>
+
+    <p class="notice">Check that the PayID name shows V HUN before you confirm.</p>
+
+  </main>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

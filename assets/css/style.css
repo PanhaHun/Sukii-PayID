@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Hey_Sukii - PayID payment page
+   Edit the design tokens in :root to change colours, fonts and sizes.
+   ========================================================================== */
+
+/* ---------- Fonts (self-hosted in assets/fonts) ---------- */
+@font-face { font-family: "Pacifico"; src: url("../fonts/Pacifico.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("../fonts/dm-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("../fonts/dm-sans-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("../fonts/dm-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("../fonts/outfit-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("../fonts/outfit-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* colours */
+  --ink: #14111a;
+  --paper: #ffffff;
+  --muted: #6d6878;
+  --line: #e6e3ec;
+  --accent: #e4007c;
+  --success: #14803c;
+
+  /* fonts */
+  --font-script: "Pacifico", "Brush Script MT", cursive;
+  --font-heading: "Outfit", "Segoe UI", system-ui, Arial, sans-serif;
+  --font-body: "DM Sans", "Segoe UI", system-ui, Arial, sans-serif;
+
+  /* sizes */
+  --logo-width: 370px;
+  --payid-logo-height: 72px;
+  --text-heading: 1.85rem;
+  --text-payid: 1.2rem;
+  --text-name: 1.4rem;
+
+  /* shape */
+  --radius: 18px;
+  --card-width: 500px;
+
+  color-scheme: light;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ink);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Background photo with dark overlay (fixed layer works on iOS too) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(14, 10, 20, .62), rgba(14, 10, 20, .78)),
+    url("../images/stall.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Layout ---------- */
+.page { width: 100%; max-width: var(--card-width); display: grid; gap: 22px; text-align: center; }
+
+/* ---------- Header ---------- */
+.brand { margin: 0; line-height: 0; }
+.brand img { display: block; margin: 0 auto; width: min(var(--logo-width), 80vw); height: auto; }
+.tagline {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, .85);
+  font-size: .92rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+/* ---------- Payment card ---------- */
+.card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 26px 20px 22px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .45);
+}
+.payid-logo { display: block; margin: 0 auto 12px; height: var(--payid-logo-height); width: auto; }
+.card h2 { margin: 0; font-family: var(--font-heading); font-size: var(--text-heading); font-weight: 700; letter-spacing: -.01em; }
+.card .hint { margin: 6px 0 18px; color: var(--muted); font-size: 1.02rem; }
+
+.payid-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: left;
+}
+.payid-row > div { min-width: 0; }
+.payid-label { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.payid-value { margin-top: 2px; font-size: var(--text-payid); font-weight: 700; overflow-wrap: break-word; user-select: all; }
+.payid-value--email { font-size: clamp(.9rem, 4.4vw, var(--text-payid)); }
+
+.copy-btn {
+  flex: none;
+  min-width: 90px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  background: var(--ink);
+  color: #fff;
+  font: 700 .95rem var(--font-body);
+  cursor: pointer;
+  transition: background .15s, transform .08s;
+}
+.copy-btn:hover { background: var(--accent); }
+.copy-btn:active { transform: scale(.96); }
+.copy-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.copy-btn.is-copied { background: var(--success); }
+
+.payid-name { margin: 20px 0 0; font-size: var(--text-name); }
+.payid-name span { color: var(--muted); }
+
+.notice { margin: 0; color: rgba(255, 255, 255, .8); font-size: .9rem; }
+
+/* ---------- 404 page ---------- */
+.link-home { color: #fff; font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}

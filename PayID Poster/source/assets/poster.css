@@ -1,0 +1,26 @@
+/* Hey_Sukii poster - shared styles. Designed at A4 size; A5 is the same layout scaled. */
+@font-face { font-family: "Outfit"; src: url("outfit-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Outfit"; src: url("outfit-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Outfit"; src: url("outfit-latin-800-normal.woff2") format("woff2"); font-weight: 800; }
+@font-face { font-family: "DM Sans"; src: url("dm-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "DM Sans"; src: url("dm-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+:root { --ink:#14111a; --pink:#e4007c; --soft:#d9d4e3; --dim:#b7b0c4; --line:#4a4357; }
+@page { margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ink); }
+body { font-family: "DM Sans", Arial, sans-serif; color: #fff; }
+.poster { position: relative; overflow: hidden; background: var(--ink); }
+.photo { background-size: cover; background-position: center; }
+.tag { letter-spacing: .3em; text-transform: uppercase; }
+h1 { margin: 0; font-family: "Outfit", Arial, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -0.005em; line-height: 1.1; }
+.sub { color: var(--soft); line-height: 1.45; margin: 0; }
+.qr { background: #fff; border-radius: 22px; padding: 14px; box-shadow: 0 0 0 6px var(--pink); flex: none; }
+.qr img { display: block; }
+.id { border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; }
+.id small { display: block; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-bottom: 3px; }
+.id b { font-family: "Outfit", Arial, sans-serif; font-weight: 700; }
+.id b.email { white-space: nowrap; letter-spacing: 0; }
+.name { color: var(--soft); }
+.name strong { color: #fff; font-family: "Outfit", Arial, sans-serif; font-weight: 700; letter-spacing: .04em; }
+.payid-badge { background: #fff; border-radius: 14px; padding: 10px 18px; display: inline-flex; }
+.payid-badge img { height: 66px; width: auto; display: block; }

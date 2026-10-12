@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hey_Sukii Poster - Portrait</title>
+<link rel="stylesheet" href="assets/poster.css">
+<style>
+  .poster { width: 210mm; height: 297mm; display: flex; flex-direction: column; }
+  .photo { height: 340px; flex: none; padding: 40px 48px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 14px;
+           background-image: linear-gradient(180deg, rgba(20,17,26,.3), rgba(20,17,26,.9)), url("assets/stall.jpg"); background-position: center 55%; }
+  .photo img { width: 520px; max-width: 100%; height: auto; display: block; }
+  .tag { font-size: 20px; }
+  .bottom { flex: 1; padding: 26px 48px 30px; gap: 18px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; }
+  h1 { font-size: 56px; }
+  .sub { font-size: 18px; max-width: 520px; margin-top: 12px; }
+  .qr img { width: 228px; height: 228px; }
+  .ids { display: flex; gap: 16px; justify-content: center; width: 100%; text-align: center; }
+  .id { flex: 1; max-width: 330px; }
+  .id b { font-size: 24px; } .id b.email { font-size: 23px; }
+  .name { margin-top: 12px; font-size: 18px; } .name strong { font-size: 22px; }
+  .badge-row { margin-bottom: 18px; }
+</style></head>
+<body>
+<div class="poster">
+  <div class="photo">
+    <img src="assets/logo-white.svg" alt="Hey_Sukii">
+    <div class="tag">3D Print &amp; Electronics</div>
+  </div>
+  <div class="bottom">
+    <div><h1>Scan to pay</h1><p class="sub">Point your phone camera at the code to open the payment page. Copy the PayID and paste it into your banking app.</p></div>
+    <div class="qr"><img src="assets/payment-qr.svg" alt="QR code to the Hey_Sukii payment page"></div>
+    <div style="width:100%">
+      <div class="badge-row"><span class="payid-badge"><img src="assets/payid-logo.png" alt="PayID"></span></div>
+      <div class="ids">
+        <div class="id"><small>PayID mobile</small><b>0413 816 785</b></div>
+        <div class="id"><small>PayID email</small><b class="email">hun.vannpanha@gmail.com</b></div>
+      </div>
+      <div class="name">PayID name: <strong>V HUN</strong></div>
+    </div>
+  </div>
+</div>
+</body></html>

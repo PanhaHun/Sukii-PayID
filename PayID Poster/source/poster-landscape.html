@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hey_Sukii Poster - Landscape</title>
+<link rel="stylesheet" href="assets/poster.css">
+<style>
+  .poster { width: 297mm; height: 210mm; display: flex; }
+  .photo { width: 40%; flex: none; padding: 40px 34px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+           background-image: linear-gradient(90deg, rgba(20,17,26,.35), rgba(20,17,26,.9)), url("assets/stall.jpg"); }
+  .photo img { width: 100%; max-width: 400px; height: auto; display: block; }
+  .tag { font-size: 16px; text-align: center; }
+  .right { flex: 1; padding: 44px 44px 44px 40px; display: flex; flex-direction: column; justify-content: center; gap: 40px; min-width: 0; }
+  h1 { font-size: 56px; }
+  .sub { font-size: 18px; margin-top: 14px; max-width: 520px; }
+  .mid { display: flex; align-items: center; gap: 26px; }
+  .qr img { width: 216px; height: 216px; }
+  .details { display: flex; flex-direction: column; gap: 12px; min-width: 0; flex: 1; }
+  .id b { font-size: 24px; } .id b.email { font-size: 20px; }
+  .name { font-size: 18px; } .name strong { font-size: 22px; }
+</style></head>
+<body>
+<div class="poster">
+  <div class="photo">
+    <img src="assets/logo-white.svg" alt="Hey_Sukii">
+    <div class="tag">3D Print &amp; Electronics</div>
+  </div>
+  <div class="right">
+    <div><h1>Scan to pay</h1><p class="sub">Point your phone camera at the code to open the payment page. Copy the PayID and paste it into your banking app.</p></div>
+    <div class="mid">
+      <div class="qr"><img src="assets/payment-qr.svg" alt="QR code to the Hey_Sukii payment page"></div>
+      <div class="details">
+        <span class="payid-badge" style="align-self:flex-start"><img src="assets/payid-logo.png" alt="PayID"></span>
+        <div class="id"><small>PayID mobile</small><b>0413 816 785</b></div>
+        <div class="id"><small>PayID email</small><b class="email">hun.vannpanha@gmail.com</b></div>
+        <div class="name">PayID name: <strong>V HUN</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
